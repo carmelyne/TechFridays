@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pubs",
+  "info": {
+    "name": "Pubs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "avgPrice": {
+      "type": "float"
+    }
+  }
+}
